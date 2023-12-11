@@ -1,0 +1,81 @@
+Transveral Array
+
+ITEM 1
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        //Carlos David A Tabacon BSIT-2
+        Console.Write("Enter the size of the array: ");
+        int size = int.Parse(Console.ReadLine());
+
+        // Check if the size is valid (non-negative)
+        while (size <= 0)
+        {
+            Console.WriteLine("Please enter a valid, non-negative size.");
+            Console.Write("Enter the size of the array: ");
+            size = int.Parse(Console.ReadLine());
+        }
+
+        int[] array = new int[size];
+
+        for (int i = 0; i < size; i++)
+        {
+            Console.Write($"Enter element #{i + 1}: ");
+            array[i] = int.Parse(Console.ReadLine());
+        }
+
+      
+        Console.WriteLine(string.Join(", ", array));
+    }
+}
+
+
+ITEM 2
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        //Carlos David Tabacon BSIT-02
+        Console.Write("Enter the size of the arrays: ");
+        int size = int.Parse(Console.ReadLine());
+
+        // Check if the size is valid (non-negative)
+        while (size <= 0)
+        {
+            Console.WriteLine("Please enter a valid, non-negative size.");
+            Console.Write("Enter the size of the arrays: ");
+            size = int.Parse(Console.ReadLine());
+        }
+
+        int[] array1 = new int[size];
+        int[] array2 = new int[size];
+        int[] sumArray = new int[size];
+
+        Console.WriteLine("Enter the elements of the first array:");
+        for (int i = 0; i < size; i++)
+        {
+            Console.Write($"Enter element #{i + 1}: ");
+            array1[i] = int.Parse(Console.ReadLine());
+        }
+
+        Console.WriteLine("Enter the elements of the second array:");
+        for (int i = 0; i < size; i++)
+        {
+            Console.Write($"Enter element #{i + 1}: ");
+            array2[i] = int.Parse(Console.ReadLine());
+        }
+
+       
+        for (int i = 0; i < size; i++)
+        {
+            sumArray[i] = array1[i] + array2[i];
+            Console.WriteLine($"{array1[i]} + {array2[i]} = {sumArray[i]}");
+        }
+    }
+}
